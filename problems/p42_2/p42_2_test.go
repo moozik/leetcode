@@ -12,38 +12,38 @@ func Test_trap(t *testing.T) {
 		wantRet int
 	}{
 		{
-			name: "1",
-			args: args{height: []int{0,1,0,2,1,0,1,3,2,1,2,1}},
+			name:    "1",
+			args:    args{height: []int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}},
 			wantRet: 6,
 		},
 		{
-			name: "2",
-			args: args{height: []int{4,2,0,3,2,5}},
+			name:    "2",
+			args:    args{height: []int{4, 2, 0, 3, 2, 5}},
 			wantRet: 9,
 		},
 		{
-			name: "3",
-			args: args{height: []int{3,1,4,7,5,0,1,5,1,5,9,6,8,9,3,3,1}},
+			name:    "3",
+			args:    args{height: []int{3, 1, 4, 7, 5, 0, 1, 5, 1, 5, 9, 6, 8, 9, 3, 3, 1}},
 			wantRet: 31,
 		},
 		{
-			name: "4",
-			args: args{height: []int{0,4,5,7,6,7,5,7,5,0,7,7,0,9,9,3,9,9,3}},
+			name:    "4",
+			args:    args{height: []int{0, 4, 5, 7, 6, 7, 5, 7, 5, 0, 7, 7, 0, 9, 9, 3, 9, 9, 3}},
 			wantRet: 25,
 		},
 		{
-			name: "单调性1",
-			args: args{height: []int{1,2,3,4,5,6,7,8,9,10,9,8,7,6,5,4,3,2,1}},
+			name:    "单调性1",
+			args:    args{height: []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1}},
 			wantRet: 0,
 		},
 		{
-			name: "单调性2",
-			args: args{height: []int{1,2,1}},
+			name:    "单调性2",
+			args:    args{height: []int{1, 2, 1}},
 			wantRet: 0,
 		},
 		{
-			name: "单调性3",
-			args: args{height: []int{0,0,1,100,88,9,1,0}},
+			name:    "单调性3",
+			args:    args{height: []int{0, 0, 1, 100, 88, 9, 1, 0}},
 			wantRet: 0,
 		},
 	}
