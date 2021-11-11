@@ -37,21 +37,21 @@ func Test_longestSubsequence(t *testing.T) {
 		},
 		{
 			args: args{
-				arr:        []int{3,4,-3,-2,-4},
+				arr:        []int{3, 4, -3, -2, -4},
 				difference: -5,
 			},
 			want: 2,
 		},
 		{
 			args: args{
-				arr:        []int{4,12,10,0,-2,7,-8,9,-9,-12,-12,8,8},
+				arr:        []int{4, 12, 10, 0, -2, 7, -8, 9, -9, -12, -12, 8, 8},
 				difference: 0,
 			},
 			want: 2,
 		},
 		{
 			args: args{
-				arr:        []int{16,-4,-6,-11,-8,-9,4,-11,15,15,-9,11,7,-7,10,-16,4},
+				arr:        []int{16, -4, -6, -11, -8, -9, 4, -11, 15, 15, -9, 11, 7, -7, 10, -16, 4},
 				difference: 3,
 			},
 			want: 3,

@@ -13,19 +13,19 @@ func Test_missingNumber(t *testing.T) {
 	}{
 		{
 			args: args{nums: []int{
-				3,0,1,
+				3, 0, 1,
 			}},
 			want: 2,
 		},
 		{
 			args: args{nums: []int{
-				0,1,
+				0, 1,
 			}},
 			want: 2,
 		},
 		{
 			args: args{nums: []int{
-				9,6,4,2,3,5,7,0,1,
+				9, 6, 4, 2, 3, 5, 7, 0, 1,
 			}},
 			want: 8,
 		},

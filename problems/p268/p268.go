@@ -8,6 +8,5 @@ func missingNumber(nums []int) int {
 	for _, item := range nums {
 		sum += item
 	}
-	return (1 + n) * n / 2 - sum
+	return (1+n)*n/2 - sum
 }
-

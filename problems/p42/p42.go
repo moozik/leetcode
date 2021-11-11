@@ -10,12 +10,12 @@ func trap(height []int) (ret int) {
 	//用单调性剪枝
 	for key, hItem := range height {
 		if key != 0 {
-			if xLeft == -1 && hItem < height[key - 1] {
+			if xLeft == -1 && hItem < height[key-1] {
 				xLeft = key - 1
 				continue
 			}
 			if xLeft != -1 {
-				if hItem > height[key - 1] {
+				if hItem > height[key-1] {
 					xRight = max(xRight, key)
 				}
 			}
