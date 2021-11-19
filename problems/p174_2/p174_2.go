@@ -7,5 +7,5 @@ func calculateMinimumHP(dungeon [][]int) int {
 	for y := range dungeonPath {
 		dungeonPath[y] = make([]int, xLen)
 	}
-
+	return 0
 }
