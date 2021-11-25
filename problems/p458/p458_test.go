@@ -13,10 +13,16 @@ func Test_poorPigs(t *testing.T) {
 		args args
 		want int
 	}{
+		//一个单位时间
 		{
 			args: args{buckets: 1000, minutesToDie: 15, minutesToTest: 15},
 			want: 10,
 		},
+		{
+			args: args{buckets: 200, minutesToDie: 15, minutesToTest: 15},
+			want: 8,
+		},
+		//多个单位时间
 		{
 			args: args{buckets: 1000, minutesToDie: 15, minutesToTest: 60},
 			want: 5,

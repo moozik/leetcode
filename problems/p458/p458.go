@@ -2,14 +2,7 @@ package p458
 
 import "math"
 
-func poorPigs(buckets int, minutesToDie int, minutesToTest int) (ans int) {
-	ans = 1
-	if minutesToDie == minutesToTest {
-		for ; ; ans++ {
-			if math.Pow(2, float64(ans)) > float64(buckets) {
-				return ans
-			}
-		}
-	}
-	return
+func poorPigs(buckets, minutesToDie, minutesToTest int) int {
+	states := minutesToTest/minutesToDie + 1
+	return int(math.Ceil(math.Log(float64(buckets)) / math.Log(float64(states))))
 }
