@@ -1,5 +1,6 @@
 package p5938
 
+//https://leetcode-cn.com/problems/find-target-indices-after-sorting-array/
 func targetIndices(nums []int, target int) (ans []int) {
 	minCount := 0
 	total := 0

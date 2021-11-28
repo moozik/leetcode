@@ -5,7 +5,7 @@ import (
 )
 
 //https://leetcode-cn.com/contest/biweekly-contest-66/problems/minimum-number-of-buckets-required-to-collect-rainwater-from-houses/
-
+//https://leetcode-cn.com/problems/minimum-number-of-buckets-required-to-collect-rainwater-from-houses/submissions/
 func minimumBuckets(street string) (ans int) {
 	n := len(street)
 	if street == "." {

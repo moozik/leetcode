@@ -1,7 +1,6 @@
 package p5939
 
-import "fmt"
-
+//https://leetcode-cn.com/problems/k-radius-subarray-averages/submissions/
 func getAverages(nums []int, k int) (ans []int) {
 	n := len(nums)
 	if n < k*2+1 {
@@ -23,7 +22,7 @@ func getAverages(nums []int, k int) (ans []int) {
 			continue
 		}
 		if k != 0 {
-			fmt.Printf("sumCount:%+v,i-k-1:%+v,i+k:%+v\n", sumCount, i-k-1, i+k)
+			// fmt.Printf("sumCount:%+v,i-k-1:%+v,i+k:%+v\n", sumCount, i-k-1, i+k)
 
 			if i-k-1 >= 0 {
 				sumCount -= nums[i-k-1]
@@ -31,7 +30,7 @@ func getAverages(nums []int, k int) (ans []int) {
 			if i+k < n {
 				sumCount += nums[i+k]
 			}
-			fmt.Printf("sumCount:%+v\n", sumCount)
+			// fmt.Printf("sumCount:%+v\n", sumCount)
 			ans = append(ans, sumCount/(k*2+1))
 		} else {
 			ans = append(ans, nums[i])

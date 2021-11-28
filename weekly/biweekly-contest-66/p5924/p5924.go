@@ -1,6 +1,7 @@
 package p5924
 
 //https://leetcode-cn.com/contest/biweekly-contest-66/problems/minimum-cost-homecoming-of-a-robot-in-a-grid/
+//https://leetcode-cn.com/problems/minimum-cost-homecoming-of-a-robot-in-a-grid/
 func minCost(startPos []int, homePos []int, rowCosts []int, colCosts []int) (ans int) {
 	//已经在家
 	if startPos[0] == homePos[0] && startPos[1] == homePos[1] {
