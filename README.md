@@ -39,4 +39,22 @@ func min(x, y int) int {
 	}
 	return y
 }
+
+func ifIntHave(nums []int, target int) bool {
+	for _, item := range nums {
+		if item == target {
+			return true
+		}
+	}
+	return false
+}
+
+func ifStringHave(nums []string, target string) bool {
+	for _, item := range nums {
+		if item == target {
+			return true
+		}
+	}
+	return false
+}
 ```
