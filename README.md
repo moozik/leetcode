@@ -1,6 +1,6 @@
 # leetcode
 
-常用函数
+## 常用函数
 ```golang
 
 //string2int64
@@ -40,6 +40,29 @@ func min(x, y int) int {
 	return y
 }
 
+```
+
+
+## 数组操作
+```golang
+//排序
+type Arr [][]int
+
+func (t Arr) Len() int {
+	return len(t)
+}
+func (t Arr) Less(i, j int) bool {
+	//正序
+	return t[i] < t[j]
+	//逆序
+	//return t[i] > t[j]
+}
+func (t Arr) Swap(i, j int) {
+	t[i], t[j] = t[j], t[i]
+}
+```
+
+```golang
 func ifIntHave(nums []int, target int) bool {
 	for _, item := range nums {
 		if item == target {

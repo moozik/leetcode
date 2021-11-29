@@ -1,27 +1,31 @@
 package p786
 
-//没做出来
-func kthSmallestPrimeFraction(arr []int, k int) (ans []int) {
-	kk := 1
+//https://leetcode-cn.com/problems/k-th-smallest-prime-fraction/
+import (
+	"sort"
+)
+
+type Arr [][]int
+
+func (t Arr) Len() int {
+	return len(t)
+}
+func (t Arr) Less(i, j int) bool {
+	return t[i][0]*t[j][1] < t[j][0]*t[i][1]
+}
+func (t Arr) Swap(i, j int) {
+	t[i], t[j] = t[j], t[i]
+}
+
+//通过排序来确定
+func kthSmallestPrimeFraction(arr []int, k int) []int {
 	n := len(arr)
-	posL, posR := 0, n-1
-	for kk != k {
-		//判断指针移动方向
-		if kk+2 <= k {
-			posL++
-			posR--
-			kk++
-			continue
-		}
-		if kk+1 == k {
-			if (posL+1)/posR < posL/(posR-1) {
-				posL++
-			} else {
-				posR--
-			}
-			break
+	var arrSort Arr
+	for i := 0; i < n-1; i++ {
+		for o := i + 1; o < n; o++ {
+			arrSort = append(arrSort, []int{arr[i], arr[o]})
 		}
 	}
-	ans[0], ans[1] = arr[posL], arr[posR]
-	return
+	sort.Sort(arrSort)
+	return arrSort[k-1]
 }
