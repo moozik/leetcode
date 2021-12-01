@@ -46,7 +46,7 @@ func min(x, y int) int {
 ## 数组操作
 ```golang
 //排序
-type Arr [][]int
+type Arr []int
 
 func (t Arr) Len() int {
 	return len(t)
