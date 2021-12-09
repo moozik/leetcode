@@ -62,6 +62,12 @@ func (t Arr) Swap(i, j int) {
 }
 ```
 
+字符串函数
+```golang
+//字符串计数
+strings.Count(row, "O")
+```
+
 ```golang
 func ifIntHave(nums []int, target int) bool {
 	for _, item := range nums {
