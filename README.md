@@ -69,7 +69,7 @@ strings.Count(row, "O")
 ```
 
 ```golang
-func ifIntHave(nums []int, target int) bool {
+func intHave(nums []int, target int) bool {
 	for _, item := range nums {
 		if item == target {
 			return true
@@ -78,7 +78,7 @@ func ifIntHave(nums []int, target int) bool {
 	return false
 }
 
-func ifStringHave(nums []string, target string) bool {
+func stringHave(nums []string, target string) bool {
 	for _, item := range nums {
 		if item == target {
 			return true
