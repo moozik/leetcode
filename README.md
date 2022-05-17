@@ -87,3 +87,17 @@ func stringHave(nums []string, target string) bool {
 	return false
 }
 ```
+
+
+```go
+func isNum(s string) bool {
+	_, err := strconv.ParseFloat(s, 64)
+	return err == nil
+}
+
+
+func isInt(s string) bool {
+	_, err := strconv.ParseInt(s)
+	return err == nil
+}
+```
