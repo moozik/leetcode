@@ -100,4 +100,9 @@ func isInt(s string) bool {
 	_, err := strconv.ParseInt(s)
 	return err == nil
 }
+
+func s2i(s string) int {
+	ret, _ := strconv.Atoi(s)
+	return ret
+}
 ```

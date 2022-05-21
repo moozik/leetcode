@@ -19,6 +19,15 @@ input.Scan()
 str2 := input.Text()
 ```
 
+
+```go
+func s2i(s string) int {
+    ret,_ := strconv.Atoi(s)
+    return ret
+}
+```
+
+
 不定行字符串/数字 输入
 ```golang
 func inputTextArr() (ret []string) {
@@ -41,7 +50,8 @@ func inputIntArr() (ret []int) {
         if in == "" {
             return
         }
-        ret = append(ret, strconv.Atoi(in))
+        intVal,_ := strconv.Atoi(in)
+        ret = append(ret, intVal)
     }
     return
 }
@@ -63,5 +73,30 @@ func printArr(data []int) {
             fmt.Println(data[i])
         }
     }
+}
+```
+
+链表相关
+```go
+//链表构造
+func buildNode(nums []int) (headNode *Node) {
+	headNode = &Node{val: nums[0]}
+	p := headNode
+	for _, item := range nums[1:] {
+		p.next = &Node{val: item}
+		p = p.next
+	}
+	return
+}
+
+//链表输出
+func printNode(node *Node) {
+	for {
+		fmt.Printf("%d ", node.val)
+		if node.next == nil {
+			break
+		}
+		node = node.next
+	}
 }
 ```
