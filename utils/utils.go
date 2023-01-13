@@ -6,11 +6,20 @@ import (
 )
 
 func Str2int(str string) int {
-	i, _ := strconv.Atoi(str)
+	i, _ := strconv.Atoi(strings.TrimSpace(str))
 	return i
 }
 
-//genIntArray [[3,0,8,4],[2,4,5,7],[9,2,6,3],[0,3,1,0]] 转换 为数组
+//IntArr [3,0,8,4] 转换 为数组
+func IntArr(str string) (ret []int) {
+	str = strings.Trim(str, "[]")
+	for _, item := range strings.Split(str, ",") {
+		ret = append(ret, Str2int(item))
+	}
+	return
+}
+
+//GenIntArray [[3,0,8,4],[2,4,5,7],[9,2,6,3],[0,3,1,0]] 转换 为数组
 func GenIntArray(str string) (ret [][]int) {
 	str = strings.Trim(str, "[]")
 	intStrArr := strings.Split(str, "],[")
