@@ -40,6 +40,20 @@ func min(x, y int) int {
 	return y
 }
 
+func min[T int8 | int32 | int64 | int | float32 | float64](x, y T) T {
+    if x < y {
+        return x
+    }
+    return y
+}
+
+func max[T int8 | int32 | int64 | int | float32 | float64](x, y T) T {
+    if x > y {
+        return x
+    }
+    return y
+}
+
 ```
 
 
